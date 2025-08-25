@@ -125,6 +125,36 @@
   <source src="assets/kesariya.mp3" type="audio/mpeg">
 </audio>
 <button id="music-toggle" class="music-btn">🔊</button>
+<script>
+  window.addEventListener("load", function() {
+    const music = document.getElementById("bg-music");
+    // Try to play immediately
+    const playPromise = music.play();
+
+    if (playPromise !== undefined) {
+      playPromise.catch(() => {
+        // If autoplay is blocked, show a button for user interaction
+        let btn = document.createElement("button");
+        btn.innerText = "🎶 Play Music";
+        btn.style.position = "fixed";
+        btn.style.bottom = "20px";
+        btn.style.right = "20px";
+        btn.style.padding = "10px 20px";
+        btn.style.borderRadius = "8px";
+        btn.style.background = "#e91e63";
+        btn.style.color = "white";
+        btn.style.border = "none";
+        btn.style.cursor = "pointer";
+        document.body.appendChild(btn);
+
+        btn.addEventListener("click", () => {
+          music.play();
+          btn.remove();
+        });
+      });
+    }
+  });
+</script>
 
 </body>
 </html>
