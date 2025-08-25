@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ashwini & Manoj Kumar — Wedding Invitation</title>
+  <meta name="description" content="You're invited to the wedding of Ashwini & Manoj Kumar on Thursday, 04 September 2025 at Bommidi Nagi Reddy Gardens & Function Hall, Near Sai Baba Temple, Thorrur Road, Hayathnagar, Hyderabad." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <img src="assets/floral.svg" alt="" class="flourish top" />
+      <h1 class="couple">Ashwini & Manoj Kumar</h1>
+      <p class="tagline">are tying the knot</p>
+      <p class="datetime">Thursday, 04 September 2025 • 10:20 AM (IST)</p>
+      <div class="cta-row">
+        <a class="btn primary" href="#details">See Details</a>
+        <a class="btn ghost" href="https://wa.me/?text=Hello!%20I'd%20love%20to%20confirm%20my%20presence%20at%20Ashwini%20&%20Manoj%20Kumar's%20wedding%20on%2004%20Sep%202025,%2010:20%20AM.%20See%20you%20there!" target="_blank" rel="noopener">RSVP on WhatsApp</a>
+      </div>
+      <img src="assets/floral.svg" alt="" class="flourish bottom" />
+    </div>
+  </header>
+
+  <main>
+    <section id="countdown" class="section">
+      <h2>Countdown</h2>
+      <div class="countdown-grid">
+        <div><span id="days">—</span><small>Days</small></div>
+        <div><span id="hours">—</span><small>Hours</small></div>
+        <div><span id="minutes">—</span><small>Minutes</small></div>
+        <div><span id="seconds">—</span><small>Seconds</small></div>
+      </div>
+    </section>
+
+    <section id="details" class="section">
+      <h2>Wedding Details</h2>
+      <div class="details-card">
+        <h3>With the blessings of the Almighty</h3>
+        <p class="lead">Please join us to celebrate the wedding of <strong>Ashwini & Manoj Kumar</strong>.</p>
+        <ul class="info">
+          <li><strong>Date:</strong> Thursday, 04 September 2025</li>
+          <li><strong>Time:</strong> 10:20 AM (IST)</li>
+          <li><strong>Venue:</strong> Bommidi Nagi Reddy Gardens & Function Hall<br>Near Sai Baba Temple, Thorrur Road, Hayathnagar, Hyderabad</li>
+        </ul>
+        <div class="actions">
+          <a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Bommidi+Nagi+Reddy+Gardens+&+Function+Hall,+Near+Sai+Baba+Temple,+Thorrur+Road,+Hayathnagar,+Hyderabad" target="_blank" rel="noopener">Open in Google Maps</a>
+          <a class="btn ghost" href="#gallery">View Gallery</a>
+        </div>
+        <p class="host">Hosted with love by Perundorai Sendilmani (Sandya) & Perundorai Kubera</p>
+      </div>
+    </section>
+
+    <section id="schedule" class="section">
+      <h2>Schedule</h2>
+      <div class="timeline">
+        <div class="item">
+          <div class="time">09:30 AM</div>
+          <div class="text">Guest Arrival & Welcome</div>
+        </div>
+        <div class="item">
+          <div class="time">10:20 AM</div>
+          <div class="text">Wedding Ceremony (Muhurtham)</div>
+        </div>
+        <div class="item">
+          <div class="time">12:00 PM</div>
+          <div class="text">Blessings & Photo Session</div>
+        </div>
+        <div class="item">
+          <div class="time">12:30 PM</div>
+          <div class="text">Lunch</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="section">
+      <h2>Gallery</h2>
+      <div class="gallery-grid">
+        <img src="assets/gallery1.jpeg" alt="Invitation image 1" loading="lazy" /><img src="assets/gallery2.jpeg" alt="Invitation image 2" loading="lazy" /><img src="assets/gallery3.jpeg" alt="Invitation image 3" loading="lazy" />
+      </div>
+    </section>
+
+    <section id="rsvp" class="section">
+      <h2>RSVP</h2>
+      <p>We'd be honored by your presence. Kindly RSVP to help us plan better.</p>
+      <a class="btn primary large" href="https://wa.me/?text=Hello!%20I'd%20love%20to%20confirm%20my%20presence%20at%20Ashwini%20&%20Manoj%20Kumar's%20wedding%20on%2004%20Sep%202025,%2010:20%20AM.%20See%20you%20there!" target="_blank" rel="noopener">Confirm on WhatsApp</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Ashwini & Manoj Kumar. All love reserved.</p>
+  </footer>
+
+  <script>
+    // Countdown to 2025-09-04 10:20:00 IST (UTC+05:30)
+    const target = new Date('2025-09-04T10:20:00+05:30').getTime();
+    function tick() {
+      const now = new Date().getTime();
+      const diff = target - now;
+      if (diff <= 0) {
+        document.getElementById('days').textContent = '0';
+        document.getElementById('hours').textContent = '0';
+        document.getElementById('minutes').textContent = '0';
+        document.getElementById('seconds').textContent = '0';
+        return;
+      }
+      const d = Math.floor(diff / (1000*60*60*24));
+      const h = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
+      const m = Math.floor((diff % (1000*60*60)) / (1000*60));
+      const s = Math.floor((diff % (1000*60)) / 1000);
+      document.getElementById('days').textContent = d;
+      document.getElementById('hours').textContent = h;
+      document.getElementById('minutes').textContent = m;
+      document.getElementById('seconds').textContent = s;
+    }
+    tick();
+    setInterval(tick, 1000);
+  </script>
+  <script src="script.js"></script>
+  <audio id="bg-music" autoplay loop>
+  <source src="assets/kesariya.mp3" type="audio/mpeg">
+</audio>
+<button id="music-toggle" class="music-btn">🔊</button>
+
+</body>
+</html>
